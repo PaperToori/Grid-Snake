@@ -1,2 +1,8 @@
-package PACKAGE_NAME;public class Panel {
+import javax.swing.*;
+
+public class Panel extends JPanel {
+    // Attributes
+    // Constructors
+    // Methods
+    // G/Set
 }
