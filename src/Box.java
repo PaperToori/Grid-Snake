@@ -3,10 +3,9 @@ import java.awt.*;
 
 public class Box {
     // Attributes
-    final int WIDTH = 500;
-    final int HEIGHT = 520;
-    final int ROWS = 30;
-    final int COLS = 30;
+    final int WIDTH = 900;
+    final int HEIGHT = 920;
+    final int SIDE = 25;
     // Constructors
     public Box(){
         // Normal JFrame stuff
@@ -15,14 +14,24 @@ public class Box {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(new Dimension(WIDTH, HEIGHT));
 
-        // 2 Panels in grid
-        JPanel mix = new JPanel();
-        mix.setBorder(BorderFactory.createLineBorder((Color.BLACK), 10));
-        LayoutManager layout = new GridLayout(ROWS,COLS);
-        mix.setLayout(layout);
+        // Creates the large panel that will hold the grid
+        Game game = new Game();
+        game.setBorder(BorderFactory.createLineBorder((Color.BLACK), 10));
+        LayoutManager layout = new GridLayout(SIDE, SIDE);
+        game.setLayout(layout);
+
+        // The panels necessary to fill the grid (can be moved into Game?)
+        Panel[] panels = new Panel[900];
+        for (int i = 0; i < (SIDE*SIDE); i++){
+            panels[i] = new Panel();
+            panels[i].setBorder(BorderFactory.createLineBorder((Color.green),3));
+            game.add(panels[i]);
+        }
+        game.inject(panels);
+
 
         // Finishing (important) touches
-        frame.add(dual);
+        frame.add(game);
         frame.setResizable(false);
         frame.setVisible(true);
     }
