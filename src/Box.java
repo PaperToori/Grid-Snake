@@ -15,20 +15,10 @@ public class Box {
         frame.setSize(new Dimension(WIDTH, HEIGHT));
 
         // Creates the large panel that will hold the grid
-        Game game = new Game();
+        Game game = new Game(SIDE);
         game.setBorder(BorderFactory.createLineBorder((Color.BLACK), 10));
         LayoutManager layout = new GridLayout(SIDE, SIDE);
         game.setLayout(layout);
-
-        // The panels necessary to fill the grid (can be moved into Game?)
-        Panel[] panels = new Panel[900];
-        for (int i = 0; i < (SIDE*SIDE); i++){
-            panels[i] = new Panel();
-            panels[i].setBorder(BorderFactory.createLineBorder((Color.green),3));
-            game.add(panels[i]);
-        }
-        game.inject(panels);
-
 
         // Finishing (important) touches
         frame.add(game);
