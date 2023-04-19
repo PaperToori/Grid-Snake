@@ -4,6 +4,8 @@ import java.util.List;
 
 public class Game extends JPanel {
     // Attributes
+
+    // ny kommentar
     Panel[] panels;
     List<Integer> snek;
     // Constructors
