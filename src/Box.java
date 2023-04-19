@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class Box {
     // Attributes
@@ -20,11 +22,18 @@ public class Box {
         LayoutManager layout = new GridLayout(SIDE, SIDE);
         game.setLayout(layout);
 
+        // KeyListener stuff
+        game.addKeyListener(game);
+        game.setFocusable(true);
+
         // Finishing (important) touches
         frame.add(game);
         frame.setResizable(false);
         frame.setVisible(true);
     }
+
     // Methods
     // G/Set
+
+
 }
