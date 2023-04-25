@@ -4,6 +4,7 @@ import java.awt.*;
 public class Panel extends JPanel {
     // Attributes
     int state;
+    int id;
     /*
     States:
     0 - Empty, White
@@ -12,8 +13,9 @@ public class Panel extends JPanel {
     * */
 
     // Constructors
-    public Panel(){
+    public Panel(int id){
         this.state = 0;
+        this.id = id;
         stain();
     }
 
@@ -24,4 +26,5 @@ public class Panel extends JPanel {
         else                     { this.setBackground(Color.RED); }
     }
     // G/Set
+    public void setState(int i){this.state = i;}
 }

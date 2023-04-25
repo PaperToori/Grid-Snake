@@ -9,14 +9,18 @@ public class Game extends JPanel implements KeyListener {
     // Attributes
 
     Panel[] panels;
+    int snekHead;
     List<Integer> snek;
     // Constructors
     public Game(int SIDE){
 
+        // Places snek in the top left corner
+        snekHead = 1;
+
         // The panels necessary to fill the grid
         panels = new Panel[(SIDE*SIDE)];
         for (int i = 0; i < (SIDE*SIDE); i++){
-            panels[i] = new Panel();
+            panels[i] = new Panel((i+1));
 
             // The border helps test if the grid is working as it should
             panels[i].setBorder(BorderFactory.createLineBorder((Color.green),3));
@@ -35,20 +39,37 @@ public class Game extends JPanel implements KeyListener {
 
     // Overrides
     @Override
-    public void keyTyped(KeyEvent e) {
+    public void paintComponent(Graphics g){
+        super.paintComponent(g);
 
-        // System.out.println(e.getKeyChar());
+        for (Panel p: panels)
+        {
+            if (p.id == snekHead){p.setState(1);}
+            else {p.setState(0);}
+            p.stain();
+        }
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
 
         switch (e.getKeyChar()) {
             case 'a' ->  // Left
-                    System.out.println("Left");
+                    snekHead -=1;
+            // System.out.println("Left");
             case 'd' -> // Right
-                    System.out.println("Right");
+                    snekHead +=1;
+            // System.out.println("Right");
             case 'w' ->    // Up
-                    System.out.println("Up");
+                    snekHead -=25;
+            //System.out.println("Up");
             case 's' -> // Down
-                    System.out.println("Down");
+                    snekHead +=25;
+            //System.out.println("Down");
         }
+
+        repaint();
     }
     @Override
     public void keyPressed(KeyEvent e) {    }
