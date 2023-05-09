@@ -9,20 +9,14 @@ public class Game extends JPanel implements KeyListener {
 
     // Attributes
     Panel[] panels;
-    int snekHead;
-    List<Integer> snek;
-    String direction; // use this to make movement dependent on updateSnek() instead of Keylistener.
-    int length;
+    Snek snek;
+    int apple;
 
     // Constructors
     public Game(int SIDE){
 
         // Sets initial snake settings
-        snekHead = 1;
-        length = 1;
-        snek = new ArrayList<Integer>();
-
-
+        snek = new Snek();
 
         // The panels necessary to fill the grid
         panels = new Panel[(SIDE*SIDE)];
@@ -38,50 +32,40 @@ public class Game extends JPanel implements KeyListener {
     }
 
     // Methods
-
     private void spotHead(){
         for (Panel p: panels)
         {
-            if (p.id == snekHead){p.setState(1);}
+            if (p.id == snek.getHead()){p.setState(1);}
             else {p.setState(0);}
             p.stain();
         }
     }
     private void spotSnek(){
 
-        if (!snek.contains(snekHead))
-        {snek.add(snekHead);}
-
-        if (snek.size() > length) {snek.remove(0);}
-        for(Integer i : snek){
-            System.out.println(i);
-        }
-        System.out.println("Length = " + length);
+        snek.updateBody();
 
         for(Panel p : panels){
-            if (snek.contains(p.id) || p.id== snekHead){p.setState(1);}
+            if (snek.getBody().contains(p.id) || p.id== snek.getHead()){p.setState(1);}
             else {p.setState(0);}
             p.stain();
         }
 
     }
     private void updateSnek(){
-        switch (direction) {
+        switch (snek.getDirection()) {
             case "Left"
-                    -> snekHead -=1;  // Left
+                    -> snek.setHead(-1);  // Left
             case "Right"
-                    -> snekHead += 1;  // Right
+                    -> snek.setHead(1);  // Right
             case "Up"
-                    -> snekHead -=25; // Up
+                    -> snek.setHead(-25); // Up
             case "Down"
-                    -> snekHead +=25; // Down
+                    -> snek.setHead(25); // Down
         }
 
     }
 
-
     // G/Set
-
     // Overrides
     @Override
     public void paintComponent(Graphics g){
@@ -95,11 +79,11 @@ public class Game extends JPanel implements KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {
         switch (e.getKeyChar()) {
-            case 'a' -> snekHead -=1;  // Left
-            case 'd' -> snekHead +=1;  // Right
-            case 'w' -> snekHead -=25; // Up
-            case 's' -> snekHead +=25; // Down
-            case 'f' -> length += 1;   // Free food
+            case 'a' -> snek.setHead(-1);  // Left
+            case 'd' -> snek.setHead(1);  // Right
+            case 'w' -> snek.setHead(-25); // Up
+            case 's' -> snek.setHead(25); // Down
+            case 'f' -> snek.extend();   // Free food
         }
         repaint();
     }

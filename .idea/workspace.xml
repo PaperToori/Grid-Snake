@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f06c7359-85ba-4cf0-8ef2-12b45c526adb" name="Changes" comment="snakhead moving, timer removed, need to remake body trail">
+    <list default="true" id="f06c7359-85ba-4cf0-8ef2-12b45c526adb" name="Changes" comment="body is back, timer needs to be added/updateSnek() made relevant.">
+      <change afterPath="$PROJECT_DIR$/src/Snek.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,22 +49,6 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="J_Letters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="19" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="J_Letters" />
-      <module name="Grid-Snake" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.J_Letters" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -81,7 +67,11 @@
       <workItem from="1682062694751" duration="2300000" />
       <workItem from="1682069775140" duration="606000" />
       <workItem from="1682425112412" duration="2265000" />
-      <workItem from="1682503951466" duration="4244000" />
+      <workItem from="1682503951466" duration="4598000" />
+      <workItem from="1682592774363" duration="316000" />
+      <workItem from="1682762235547" duration="2457000" />
+      <workItem from="1683618819903" duration="1765000" />
+      <workItem from="1683632367074" duration="2632000" />
     </task>
     <task id="LOCAL-00001" summary="The start of something great">
       <created>1680089805808</created>
@@ -132,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682427379161</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="body is back, timer needs to be added/updateSnek() made relevant.">
+      <created>1682508398852</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682508398853</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +154,7 @@
     <MESSAGE value="test push" />
     <MESSAGE value="keypressed functioning" />
     <MESSAGE value="snakhead moving, timer removed, need to remake body trail" />
-    <option name="LAST_COMMIT_MESSAGE" value="snakhead moving, timer removed, need to remake body trail" />
+    <MESSAGE value="body is back, timer needs to be added/updateSnek() made relevant." />
+    <option name="LAST_COMMIT_MESSAGE" value="body is back, timer needs to be added/updateSnek() made relevant." />
   </component>
 </project>
