@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f06c7359-85ba-4cf0-8ef2-12b45c526adb" name="Changes" comment="body is back, timer needs to be added/updateSnek() made relevant.">
-      <change afterPath="$PROJECT_DIR$/src/Snek.java" afterDir="false" />
+    <list default="true" id="f06c7359-85ba-4cf0-8ef2-12b45c526adb" name="Changes" comment="second-to-last update???">
+      <change afterPath="$PROJECT_DIR$/src/Apple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Snek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Snek.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,9 @@
       <workItem from="1682592774363" duration="316000" />
       <workItem from="1682762235547" duration="2457000" />
       <workItem from="1683618819903" duration="1765000" />
-      <workItem from="1683632367074" duration="2632000" />
+      <workItem from="1683632367074" duration="3275000" />
+      <workItem from="1683650159484" duration="193000" />
+      <workItem from="1684237692319" duration="4672000" />
     </task>
     <task id="LOCAL-00001" summary="The start of something great">
       <created>1680089805808</created>
@@ -129,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682508398853</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="second-to-last update???">
+      <created>1683637353227</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683637353227</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +165,7 @@
     <MESSAGE value="keypressed functioning" />
     <MESSAGE value="snakhead moving, timer removed, need to remake body trail" />
     <MESSAGE value="body is back, timer needs to be added/updateSnek() made relevant." />
-    <option name="LAST_COMMIT_MESSAGE" value="body is back, timer needs to be added/updateSnek() made relevant." />
+    <MESSAGE value="second-to-last update???" />
+    <option name="LAST_COMMIT_MESSAGE" value="second-to-last update???" />
   </component>
 </project>
